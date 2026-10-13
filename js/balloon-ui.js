@@ -123,7 +123,7 @@ const BalloonUI = {
     card.innerHTML = `
       <div class="flight-header">
         <div class="flight-main">
-          <div class="balloon-icon-hero">\u{1F388}</div>
+          <div class="balloon-icon-hero"><svg width="32" height="32" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M12 2C8 2 5 5.2 5 9c0 3.2 2.4 6.1 5.4 7.6L10 19h4l-.4-2.4C16.6 15.1 19 12.2 19 9c0-3.8-3-7-7-7z"/><rect x="10" y="20" width="4" height="3" rx="1"/></svg></div>
           <div class="flight-title">
             <h2>${serialLink}</h2>
             <div class="flight-meta">
@@ -170,7 +170,7 @@ const BalloonUI = {
       this.elements.balloonHistory.innerHTML = `
         <tr>
           <td colspan="6" style="text-align: center; color: var(--text-muted); padding: 40px;">
-            \u{1F388} No balloons detected yet${locationText}
+            No balloons detected yet${locationText}
           </td>
         </tr>
       `;
@@ -184,8 +184,8 @@ const BalloonUI = {
         : new Date(b.lastSeen).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
       const serialLink = this.renderSerialLink(b.serial, 'balloon-serial');
       const trackerLink = this.getSondeHubUrl(b.serial)
-        ? `<a href="${this.getSondeHubUrl(b.serial)}" target="_blank" rel="noopener noreferrer" class="history-link" title="View on SondeHub">\u{1F4CA} Track</a>`
-        : '<span class="history-link disabled">\u2014</span>';
+        ? `<a href="${this.getSondeHubUrl(b.serial)}" target="_blank" rel="noopener noreferrer" class="history-link" title="View on SondeHub">Track</a>`
+        : '<span class="history-link disabled">-</span>';
 
       const distanceDisplay = isActive && b.currentDistance
         ? `<span class="distance-active">${b.currentDistance.toFixed(0)} km</span>`
@@ -199,7 +199,7 @@ const BalloonUI = {
         <tr class="${isActive ? 'balloon-active' : ''}">
           <td>
             <div class="flight-cell">
-              <div class="balloon-icon-small">\u{1F388}</div>
+              <div class="balloon-icon-small"><svg width="18" height="18" viewBox="0 0 24 24" fill="#f97316" aria-hidden="true"><path d="M12 2C8 2 5 5.2 5 9c0 3.2 2.4 6.1 5.4 7.6L10 19h4l-.4-2.4C16.6 15.1 19 12.2 19 9c0-3.8-3-7-7-7z"/><rect x="10" y="20" width="4" height="3" rx="1"/></svg></div>
               <div class="flight-info">
                 ${serialLink}
                 <span class="flight-route">${b.type || b.manufacturer || 'Balloon'}${b.frequency ? ` \u2022 ${b.frequency} MHz` : ''}</span>

@@ -200,7 +200,7 @@ const BalloonApp = {
         BalloonMap.updateTrails(data.trails);
       }
 
-      BalloonUI.setStatus('success', `Updated \u2013 ${data.stats.activeCount} balloon${data.stats.activeCount !== 1 ? 's' : ''}`);
+      BalloonUI.setStatus('success', `Updated, ${data.stats.activeCount} balloon${data.stats.activeCount !== 1 ? 's' : ''}`);
 
     } catch (err) {
       console.error('Refresh failed:', err);

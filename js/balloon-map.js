@@ -132,7 +132,7 @@ const BalloonMap = {
     // Balloon icon
     const balloonIcon = L.divIcon({
       className: 'balloon-marker',
-      html: `<div style="font-size: 24px; filter: drop-shadow(0 2px 3px rgba(0,0,0,0.3)); ${isClose ? 'transform: scale(1.2);' : ''}">\u{1F388}</div>`,
+      html: `<div style="font-size: 24px; filter: drop-shadow(0 2px 3px rgba(0,0,0,0.3)); ${isClose ? 'transform: scale(1.2);' : ''}"><svg width="28" height="28" viewBox="0 0 24 24" fill="#f97316" aria-hidden="true"><path d="M12 2C8 2 5 5.2 5 9c0 3.2 2.4 6.1 5.4 7.6L10 19h4l-.4-2.4C16.6 15.1 19 12.2 19 9c0-3.8-3-7-7-7z"/><rect x="10" y="20" width="4" height="3" rx="1"/></svg></div>`,
       iconSize: [28, 28],
       iconAnchor: [14, 14]
     });
